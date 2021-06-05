@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Head from 'next/head'
 
 export default function Grid() {
   const [col, setCol] = useState(1)
@@ -13,15 +14,20 @@ export default function Grid() {
   const escStyle = `col-span-1 row-span-1 px-4 py-2 mt-4 font-bold text-white bg-blue-500 outline-none cursor-pointer hover:bg-blue-600 active:bg-blue-700 focus:outline-none rounded-xl col-start-${col} row-start-${row}`
 
   return (
-    <div className="grid w-screen h-screen grid-cols-12 grid-rows-6">
-      <button
-        className={escStyle}
-        onMouseOver={() => changePosision()}
-        onClick={() => changePosision()}
-      >
-        Push me!
-      </button>
-    </div>
+    <>
+      <Head>
+        <title>Escape button(grid)</title>
+      </Head>
+      <div className="grid w-screen h-screen grid-cols-12 grid-rows-6">
+        <button
+          className={escStyle}
+          onMouseOver={() => changePosision()}
+          onClick={() => changePosision()}
+        >
+          Push me!
+        </button>
+      </div>
+    </>
   )
 }
 ;[

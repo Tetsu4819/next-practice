@@ -1,7 +1,11 @@
 import Link from 'next/link'
+import Head from 'next/head'
 function Home() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Next Practice</title>
+      </Head>
       <h1 className="pt-16 text-6xl font-bold text-center">Next.js</h1>
       <h2 className="pt-8 text-4xl font-bold text-center">samples</h2>
       <ul className="pt-4 text-center">
@@ -12,18 +16,20 @@ function Home() {
         </li>
         <li>
           <Link href="/escape/grid-ver">
-            <a className="mt-8 text-2xl font-bold text-center">escape(grid)</a>
+            <a className="mt-8 text-2xl font-bold text-center">
+              Escape button(grid)
+            </a>
           </Link>
         </li>
         <li>
           <Link href="/escape/margin-ver">
             <a className="mt-8 text-2xl font-bold text-center">
-              escape(margin)
+              Escape button(margin)
             </a>
           </Link>
         </li>
       </ul>
-    </div>
+    </>
   )
 }
 

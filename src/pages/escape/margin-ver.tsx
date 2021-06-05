@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import Head from 'next/head'
 
 export default function Grid() {
   const [mh, setMh] = useState(3)
@@ -17,15 +18,20 @@ export default function Grid() {
   }
 
   return (
-    <div className="w-full h-auto ">
-      <button
-        style={style}
-        className="px-4 py-2 mt-4 font-bold text-white bg-blue-500 outline-none cursor-pointer hover:bg-blue-600 active:bg-blue-700 focus:outline-none rounded-xl"
-        onMouseOver={() => changePosision()}
-        onClick={() => changePosision()}
-      >
-        Push me!
-      </button>
-    </div>
+    <>
+      <Head>
+        <title>Escape button(margin)</title>
+      </Head>
+      <div className="w-full h-auto ">
+        <button
+          style={style}
+          className="px-4 py-2 mt-4 font-bold text-white bg-blue-500 outline-none cursor-pointer hover:bg-blue-600 active:bg-blue-700 focus:outline-none rounded-xl"
+          onMouseOver={() => changePosision()}
+          onClick={() => changePosision()}
+        >
+          Push me!
+        </button>
+      </div>
+    </>
   )
 }
