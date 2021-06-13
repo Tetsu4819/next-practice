@@ -29,6 +29,11 @@ function Home() {
               </a>
             </Link>
           </li>
+          <li>
+            <Link href="/FlyBalloons">
+              <a className="mt-8 text-2xl font-bold text-center">FlyBalloons</a>
+            </Link>
+          </li>
         </ul>
       </div>
     </>
